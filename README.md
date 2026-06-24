@@ -1,2 +1,3 @@
 # weather-tracker
 A data science project that automatically tracks daily weather data for Sanborn County Park to evaluate overnight temperature thresholds.
+This data science project automatically tracks and evaluates daily weather data for Sanborn County Park. I built this tool to analyze overnight temperature thresholds and determine if standard 3-season camping gear is sufficient for a safe and comfortable trip. The script uses the Open-Meteo API to fetch a 5-year historical baseline of daily high and low temperatures alongside a live 7-day weather forecast, saving the results directly into clean CSV files.
