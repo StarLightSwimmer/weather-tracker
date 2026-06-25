@@ -109,6 +109,10 @@ def generate_dashboard():
             linewidth=2, marker='o', markersize=5, label="Temp (°F)")
     max_idx = df["temp_f"].idxmax()
     min_idx = df["temp_f"].idxmin()
+    ax.scatter(df.loc[max_idx, "datetime"], df.loc[max_idx, "temp_f"],
+               color="red", zorder=5, label=f"Max: {df.loc[max_idx, 'temp_f']}°F")
+    ax.scatter(df.loc[min_idx, "datetime"], df.loc[min_idx, "temp_f"],
+               color="blue", zorder=5, label=f"Min: {df.loc[min_idx, 'temp_f']}°F")
     ax.annotate(f"Max: {df.loc[max_idx, 'temp_f']}°F",
                 xy=(df.loc[max_idx, "datetime"], df.loc[max_idx, "temp_f"]),
                 xytext=(10, 10), textcoords="offset points",
