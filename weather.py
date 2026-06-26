@@ -149,4 +149,3 @@ log_file = "daily_log.csv"
 log_df.to_csv(log_file, mode='a', header=not os.path.isfile(log_file), index=False)
 print(f"Logged current temperature: {current_temp} degrees C at {current_time}")
 generate_dashboard()
-
